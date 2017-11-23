@@ -10,8 +10,13 @@ describe("Word Frequency",function () {
         expect(result).to.equal('');
     });
 
-    it("returns empty string given one world",function () {
+    it("returns empty string given one word",function () {
         let result = main('he');
         expect(result).to.equal('he 1');
+    });
+
+    it("returns empty string given two different words",function () {
+        let result = main('he is');
+        expect(result).to.equal('he 1\r\nis 1');
     });
 });
