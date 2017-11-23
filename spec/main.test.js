@@ -9,4 +9,9 @@ describe("Word Frequency",function () {
         let result = main('');
         expect(result).to.equal('');
     });
+
+    it("returns empty string given one world",function () {
+        let result = main('he');
+        expect(result).to.equal('he 1');
+    });
 });
