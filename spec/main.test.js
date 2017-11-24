@@ -19,4 +19,9 @@ describe("Word Frequency",function () {
         let result = main('he is');
         expect(result).to.equal('he 1\r\nis 1');
     });
+
+    it("returns empty string given duplicated words",function () {
+        let result = main('he is he');
+        expect(result).to.equal('he 2\r\nis 1');
+    });
 });
